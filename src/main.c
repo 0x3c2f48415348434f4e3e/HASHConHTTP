@@ -1,4 +1,6 @@
-#include<stdio.h>
-int main(int argc, char ** argv[]){
-	printf("Hello world");
+#include"../include/allHeaders.h"
+int main(void){
+
+	printSystem();
+	return 0;
 }
