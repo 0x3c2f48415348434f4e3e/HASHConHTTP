@@ -1,2 +1,4 @@
 void printSystem(void);
-int initiateSocket();
+int initiateSocket(void);
+int bindCreatedSocket(void);
+struct in_addr returnAddress(void);
