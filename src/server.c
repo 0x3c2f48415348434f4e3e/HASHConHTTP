@@ -4,9 +4,11 @@
 #define lins() \
 	printf("Linux System\n")
 
-	struct sockaddr_in *server;//*client;
+	struct sockaddr_in *server,*client;
 	//define the struct(for internet stuff) for our server and client
 	int serverSocket;
+
+	bool isListening = FALSE;
 #ifdef _WIN32
 	void printSystem(void){
 		wins();
@@ -78,10 +80,22 @@
 			error("Failed to bind socket\n");
 
 		}
+		isListening = TRUE;
 		return 0;
 	}
 
 	void handleClient(){
-		while
+		//lets listen
+		int __accept;
+		while(isListening){
+			//accept
+			__accept = accept(serverSocket,(struct sockaddr *) server,(socklen_t * restrict) sizeof(*client));
+
+			if(__accept < 0){
+				error("Something went wrong\n");
+
+			}
+			printf("Accepted Connection\n");
+		}
 	}
 #endif

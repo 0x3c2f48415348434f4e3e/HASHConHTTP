@@ -9,4 +9,4 @@
 #define PORT 5000 //this will be for our port for the server only
 #define QUEUE_LENGTH 15
 
-typedef enum Bool {TRUE, FALSE};
+typedef enum Bool {FALSE, TRUE} bool;
