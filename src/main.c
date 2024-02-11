@@ -9,6 +9,10 @@ int main(void){
 	if(bindCreatedSocket() == 0){
 		printf("Successfully binded socket to address %s and port %d\n",inet_ntoa(returnAddress()),PORT);
 	}
+	if(listenForClient() == 0){
+		printf("Server listening");
+	}
 
+	cleanUp();
 	return 0;
 }
