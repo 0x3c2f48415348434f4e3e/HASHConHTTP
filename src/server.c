@@ -87,15 +87,19 @@
 	void handleClient(){
 		//lets listen
 		int __accept;
+		socklen_t addrlen = sizeof(client);
 		while(isListening){
 			//accept
-			__accept = accept(serverSocket,(struct sockaddr *) server,(socklen_t * restrict) sizeof(*client));
+			__accept = accept(serverSocket,(struct sockaddr *) server,&addrlen);
 
 			if(__accept < 0){
 				error("Something went wrong\n");
 
 			}
 			printf("Accepted Connection\n");
+
+			//seems like we will have to read from the client I think
+			
 		}
 	}
 #endif

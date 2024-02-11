@@ -1,8 +1,11 @@
 # HASHHTTP
 Creating an HTTP server using the C programming language which will replicate the features of the NGINX web server
 # TO DO
-- [] Create server
-- [] Create client
+- [x] Create server
+- [] Configure client (i.e. web browser)
+- [] Understand how HTTP works
+- [] Handl request from client
+- [] Server client with response
 # Server
 So what is a socket. Well, a socket is something 
 (for the more technical individuals, a 'channel') that allows us to
@@ -21,3 +24,4 @@ To check if a system is windows or Linux, we have the macros:
 
 2. #ifdef linux
    #endif
+
