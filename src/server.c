@@ -128,14 +128,12 @@
                  "Content-Type: text/html\n"
                  "Content-Length: 1354\n"
                  "\n" // End of headers, start of body
-                 "Welcome to my very Insecure web server. Hopefully you do not get hacked";
-				 /*
-				 "<html>\n"
-                 "<body>\n"
-                 "<h1>Hello world</h1>\n"
-                 "</body>\n"
-                 "</html>\n";*/
-		//printf("%s",response);
+				 "<html>"
+				"<body>"
+				"<h1>Testing</h1>"
+				"</body>"
+				"</html>";
+                 //"Welcome to my very Insecure web server. Hopefully you do not get hacked";
 		size_t response_length = strlen(response);
 		//Now we are going to send the response abpve to the client that requested
 		send(__accept,response,response_length,0);

@@ -25,3 +25,6 @@ To check if a system is windows or Linux, we have the macros:
 2. #ifdef linux
    #endif
 
+# Rendering HTML
+
+
