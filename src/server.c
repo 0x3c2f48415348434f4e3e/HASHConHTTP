@@ -96,9 +96,52 @@
 				error("Something went wrong\n");
 
 			}
-			printf("Accepted Connection\n");
+			//printf("Accepted Connection\n");
 
 			//seems like we will have to read from the client I think
+			/*
+			For this i will do a simple test to make sure that i am using the right format for HTTP.
+			So all i will do is send a HTTP resource when a user connects
+
+
+			The format of HTTP is as follows:
+			1. Initial line - Different for request and response
+			2. 1 or more Header line
+			3.  A black line (i.e. a CRLF by itself)
+			4. An optional message (e.g. a file, or query data, or query output)
+
+			What i am going to do is just send a Hello world
+
+			Response (Note the below is for testing):
+			HTTP/1.0 200 OK
+			Content-Type:text/html
+			Content-Length: 1354
+
+			<html>
+			<body>
+			<h1>Hello world</h1>
+			</body>
+			</html>
+			*/
+
+		char *response = "HTTP/1.1 200 OK\n"
+                 "Content-Type: text/html\n"
+                 "Content-Length: 1354\n"
+                 "\n" // End of headers, start of body
+                 "Welcome to my very Insecure web server. Hopefully you do not get hacked";
+				 /*
+				 "<html>\n"
+                 "<body>\n"
+                 "<h1>Hello world</h1>\n"
+                 "</body>\n"
+                 "</html>\n";*/
+		//printf("%s",response);
+		size_t response_length = strlen(response);
+		//Now we are going to send the response abpve to the client that requested
+		send(__accept,response,response_length,0);
+
+		//close cline tsocket
+		close(__accept);
 			
 		}
 	}

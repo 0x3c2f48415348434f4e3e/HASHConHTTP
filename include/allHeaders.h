@@ -3,6 +3,8 @@
 #include<netinet/in.h>
 #include<stdint.h>
 #include<arpa/inet.h>
+#include<unistd.h>
+#include<string.h>
 #include"client.h"
 #include"server.h"
 #include"errorHandling.h"
