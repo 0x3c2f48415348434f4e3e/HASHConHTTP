@@ -6,6 +6,7 @@ Creating an HTTP server using the C programming language which will replicate th
 - [x] Understand how HTTP works
 - [x] Handl request from client
 - [x] Server client with response
+- [x] Render HTML 
 # Server
 So what is a socket. Well, a socket is something 
 (for the more technical individuals, a 'channel') that allows us to
@@ -26,5 +27,5 @@ To check if a system is windows or Linux, we have the macros:
    #endif
 
 # Rendering HTML
-
+In order to reder HTML
 

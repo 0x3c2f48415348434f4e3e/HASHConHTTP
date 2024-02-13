@@ -126,13 +126,14 @@
 
 		char *response = "HTTP/1.1 200 OK\n"
                  "Content-Type: text/html\n"
-                 "Content-Length: 1354\n"
-                 "\n" // End of headers, start of body
+                 "\n"
 				 "<html>"
 				"<body>"
-				"<h1>Testing</h1>"
+				"<h1>Hello world</h1>"
+				"<p>I created my first insecure web server</p>"
 				"</body>"
 				"</html>";
+				//"Content-Length: 1354\n"
                  //"Welcome to my very Insecure web server. Hopefully you do not get hacked";
 		size_t response_length = strlen(response);
 		//Now we are going to send the response abpve to the client that requested
